@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
+from center.config_center import get_style_sheet
 from component.banner_widget import OpenNobilityBannerWidget, WorldBannerWidget
 from component.chat_widget import ChatWidget
 from component.circle_image import CircleImage
@@ -68,16 +69,11 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     # 测试样式表
-    styleSheet = ''
-    file = QFile("qss/main.css")
-    if file.open(QIODevice.ReadOnly | QIODevice.Text):
-        styleSheet = str(file.readAll(), encoding='utf-8')
+    styleSheet = get_style_sheet('main.css')
     app.setStyleSheet(styleSheet)
 
     window = MyWidget()
     window.show()
-
-    print([i for i in range(2, 10)])
 
     # 加载字体
     # font_path = os.path.join(ROOT_DIR, 'font/seguisym.ttf')
