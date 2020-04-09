@@ -1,0 +1,61 @@
+
+QLabel {
+    /*font-family: "Microsoft YaHei";*/
+    /*font-size: 18px;*/
+    /*color: #BDC8E2;*/
+    /*font-style: italic;*/
+    /*font-weight: bold;*/
+
+    font: 18px "Microsoft YaHei";
+    color: #BDC8E2;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: aqua;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-radius: 20px;
+
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: red;
+    border-top: 2px solid red;
+
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-right-color: green;
+    border-right: 3px solid green;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: blue;
+    border-bottom: 2px solid blue;
+
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-left-color: aqua;
+    border-left: 3px solid aqua;
+
+    padding-left: 10px;
+    padding-top: 5px;
+
+    background-color: #2E3648;
+    background-image: url(./image.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    /*background: url("./image.png") #2E3648 no-repeat left center;*/
+}
+
+QLabel:hover{
+    background-color: aqua;
+    border-color: green;
+}
+
+QLabel:disabled {
+    background-color: red;
+    border-color: brown;
+}

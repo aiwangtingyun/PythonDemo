@@ -1,0 +1,52 @@
+
+QPushButton {
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: rgba(0, 255, 0, 255);
+    font-style: italic;
+    font-weight: bold;
+
+    text-align: left center;
+
+    padding-left: 0px;
+    padding-top: 0px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255, 0, 0, 255);
+
+    border-radius: 0px;
+
+    /*background-color: rgba(0, 0, 0, 255);*/
+    /*background-image: url(./image.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: left center;*/
+}
+
+QPushButton:hover{
+    color: #2E3648;
+}
+
+QPushButton:pressed{
+    color: red;
+}
+
+QPushButton:flat {
+    border-color: chocolate;
+}
+
+QPushButton::menu-indicator {
+    image: url(./image.png);
+    subcontrol-position: right top;
+    subcontrol-origin: padding;
+    right: 10px;
+    top: 10px;
+}
+
+QPushButton::menu-indicator:hover {
+    image: url(./image1.png)
+}
+
+QPushButton::menu-indicator:open {
+    image: url(./image2.png)
+}

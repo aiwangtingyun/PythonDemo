@@ -1,0 +1,86 @@
+
+#bannerSener {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #F8FF00;
+    border: none;
+    outline: none;
+    background: transparent ;
+}
+
+#bannerReceiver {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #F8FF00;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#bannerNormalText {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#bannerGiftCount {
+    font-family: "Segoe UI Black";
+    font-size: 26px;
+    color: #F8FF00;
+    font-weight: bold;
+    font-style: italic;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#bannerOnlookBtn {
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    color: #F8FF00;
+    border-color: #F8FF00;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    background: transparent;
+}
+
+#bannerOnlookBtn:pressed {
+    color: #FFD81E;
+    border-color: #FFD81E;
+}
+
+#bannerOpener {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #F8FF00;
+    border: none;
+    outline: none;
+    background: transparent ;
+}
+
+#bannerOpenType {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #F8FF00;
+    border: none;
+    outline: none;
+    background: transparent ;
+}
+
+QPushButton {
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: aqua;
+    border-radius: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: green;
+}

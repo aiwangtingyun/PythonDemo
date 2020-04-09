@@ -1,0 +1,79 @@
+
+QComboBox {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #000000;
+    font-style: normal;
+    font-weight: bold;
+
+    padding-left: 6px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: aqua;
+
+    background-color: #2E3648;
+    background-image: url("./image.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+QComboBox::drop-down {
+    width:28px;
+    height:22px;
+    border: 1px solid red;
+    border: none;
+
+    subcontrol-position: right top;
+    subcontrol-origin: padding;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-radius: 6px;
+
+    /*border-radius: 4px;*/
+    /*padding-right: 0px;*/
+    /*background-image: url("./arrow_down.png");*/
+}
+
+QComboBox::down-arrow {
+    border: 1px solid green;
+    border: none;
+    width: 28px;
+    height: 13px;
+    right: 0px;
+    top: 3px;
+    image: url("./arrow_down.png");
+}
+
+/*QComboBox QAbstractItemView {*/
+    /*font-family: "Microsoft YaHei";*/
+    /*font-size: 16px;*/
+    /*color: #BDC8E2;*/
+    /*font-style: italic;*/
+    /*font-weight: bold;*/
+
+    /*background-color: red;*/
+
+    /*outline: none;*/
+/*}*/
+
+/*QComboBox QAbstractItemView::item {*/
+    /*color: #BDC8E2;*/
+    /*padding-left: 25px;*/
+    /*background-color: #212735;*/
+    /*min-height: 25px;*/
+    /*border: 1px solid #212735;*/
+/*}*/
+
+/*QComboBox QAbstractItemView::item:hover {*/
+    /*color: #0DA5EF;*/
+    /*background-color: #212735;*/
+/*}*/
+
+/*QComboBox QAbstractItemView::item:selected {*/
+    /*color: #0DA5EF;*/
+    /*background-color: #212735;*/
+/*}*/
