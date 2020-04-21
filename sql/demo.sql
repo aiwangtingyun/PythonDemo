@@ -11,14 +11,14 @@ USE school;
 SHOW TABLES;
 
 # 创建新表
-CREATE TABLE students (
+CREATE TABLE students(
     stu_id      INT         NOT NULL AUTO_INCREMENT,    # 学生ID
-    stu_name    CHAR(10)    NOT NULL,                   # 姓名
-    stu_sex     CHAR(5)     NOT NULL DEFAULT "女",      # 性别
-    stu_class   CHAR(10)    NOT NULL,                   # 班级
-    stu_phone   CHAR(20)    NULL,                       # 电话号码
+    stu_name    CHAR(10)    NOT NULL,                   # 学生姓名
+    stu_math    INT         NULL DEFAULT 60,            # 数学成绩
+    stu_eng     INT         NULL DEFAULT 60,            # 英语成绩
+    stu_art     INT         NULL DEFAULT 60,            # 美术成绩
     PRIMARY KEY (stu_id)
-) ENGINE=INNODB;
+)ENGINE=INNODB;
 
 # 查看表的内部结构
 DESCRIBE students;
@@ -38,19 +38,24 @@ DROP COLUMN stu_math;
 
 # 插入单行数据（不安全）
 INSERT INTO students
-VALUES(1, "小明", "男", "3年级", "123456");
+VALUES(1, "Jack", 55, 88, 66);
 
 # 插入单行数据（安全）
-INSERT INTO students(stu_id, stu_name, stu_sex, stu_class, stu_phone)
-VALUES(2, "小英", "女", "2年级", "456789");
+INSERT INTO students(stu_id, stu_name, stu_math, stu_eng, stu_art)
+VALUES(1, "Jack", 55, 88, 66);
 
 # 插入单行数据（省略部分字段）
-INSERT INTO students(stu_name, stu_class)
-VALUES("小花", "2年级");
+INSERT INTO students(stu_name, stu_math)
+VALUES("Jack", 55);
 
 # 插入多行数据
-INSERT INTO students(stu_name, stu_sex, stu_class)
-VALUES("小张", "男", "2年级"),("小云", "女", "2年级");
+INSERT INTO students(stu_name, stu_math, stu_eng, stu_art)
+VALUES
+("Jack", 55, 88, 66),
+("John", 88, 86, 90), 
+("Marry", 88, 95, 96), 
+("Andy", 88, 95, 80),
+("Coco", 86, 89, 75);
 
 # 查看最后一个自增值
 SELECT LAST_INSERT_ID();
@@ -64,14 +69,14 @@ CREATE TABLE students2 LIKE students;
 INSERT INTO students2 SELECT * FROM students;
 
 # 选择插入数据数据
-INSERT INTO students2(stu_id, stu_name, stu_sex, stu_class, stu_phone)
-SELECT stu_id, stu_name, stu_sex, stu_class, stu_phone FROM students;
+INSERT INTO students2(stu_id, stu_name, stu_math, stu_eng, stu_art)
+SELECT stu_id, stu_name, stu_math, stu_eng, stu_art FROM students;
 
 # 创建并复制表数据
-CREATE TABLE students3 SELECT * FROM students2;
+CREATE TABLE students2 SELECT * FROM students;
 
 # 删除一行数据
-DELETE FROM students2
+DELETE FROM students
 WHERE stu_id = 1;
 
 # 删除全部数据
@@ -84,12 +89,18 @@ TRUNCATE TABLE students2;
 
 # 修改表数据
 UPDATE IGNORE students
-SET stu_sex = "女", stu_phone = "123456"
-WHERE stu_id = 5;
+SET stu_math = 88
+WHERE stu_id = 2;
 
 # 检索单个列
-
+SELECT stu_name FROM students;
 
-# 查看表所有行数据
+# 检索多列
+SELECT stu_id, stu_name, stu_math FROM students;
+
+# 检索结果值唯一
+SELECT DISTINCT stu_id, stu_math, stu_eng FROM students;
+
+# 检索表所有数据
 SELECT * FROM students;
 
