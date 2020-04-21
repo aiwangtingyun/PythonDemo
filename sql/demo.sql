@@ -57,6 +57,15 @@ VALUES
 ("Andy", 88, 95, 80),
 ("Coco", 86, 89, 75);
 
+# 选择插入数据数据
+INSERT INTO students2(stu_id, stu_name, stu_math, stu_eng, stu_art)
+SELECT stu_id, stu_name, stu_math, stu_eng, stu_art FROM students;
+
+# 修改表数据
+UPDATE IGNORE students
+SET stu_math = 88
+WHERE stu_id = 2;
+
 # 查看最后一个自增值
 SELECT LAST_INSERT_ID();
 
@@ -67,10 +76,6 @@ CREATE TABLE students2 LIKE students;
 
 # 导入表数据
 INSERT INTO students2 SELECT * FROM students;
-
-# 选择插入数据数据
-INSERT INTO students2(stu_id, stu_name, stu_math, stu_eng, stu_art)
-SELECT stu_id, stu_name, stu_math, stu_eng, stu_art FROM students;
 
 # 创建并复制表数据
 CREATE TABLE students2 SELECT * FROM students;
@@ -87,11 +92,6 @@ TRUNCATE TABLE students2;
 
 /***********************************************************/
 
-# 修改表数据
-UPDATE IGNORE students
-SET stu_math = 88
-WHERE stu_id = 2;
-
 # 检索单个列
 SELECT stu_name FROM students;
 
@@ -104,3 +104,17 @@ SELECT DISTINCT stu_id, stu_math, stu_eng FROM students;
 # 检索表所有数据
 SELECT * FROM students;
 
+# 限制检索返回个数
+SELECT stu_id, stu_name FROM students
+LIMIT 3;
+
+# 限制开始检索的行数
+SELECT stu_id, stu_name FROM students
+LIMIT 2,3;
+
+# 限制开始检索的行数(更清晰)
+SELECT stu_id, stu_name FROM students
+LIMIT 3 OFFSET 2;
+
+# 完全限定名
+SELECT students.stu_name FROM school.students;
