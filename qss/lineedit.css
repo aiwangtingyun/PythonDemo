@@ -1,0 +1,9 @@
+
+QLineEdit {
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: black;
+    border-width: 2px;
+    border-color: aqua;
+    border-style: solid;
+}

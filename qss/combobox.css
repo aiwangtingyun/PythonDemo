@@ -1,79 +1,90 @@
 
 QComboBox {
+    /* 设置字体属性 */
     font-family: "Microsoft YaHei";
     font-size: 14px;
     color: #000000;
     font-style: normal;
     font-weight: bold;
 
+    /* 文字位置 */
     padding-left: 6px;
+    padding-top: 3px;
 
+    /* 边界设置 */
     border-width: 1px;
     border-style: solid;
     border-color: aqua;
+    /*border: 1px solid aqua;*/
 
-    background-color: #2E3648;
-    background-image: url("./image.png");
+    /* 圆角设置 */
+    border-radius: 8px;
+    /*border-top-left-radius: 8px;*/
+    /*border-top-right-radius: 8px;*/
+    /*border-bottom-left-radius: 8px;*/
+    /*border-bottom-right-radius: 8px;*/
+
+    /* 背景设置 */
+    background-color: antiquewhite;
+    background-image: url("./images/bilibili.png");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center center;
+
+    /*image: url("./images/dice.png");*/
 }
 
 QComboBox::drop-down {
-    width:28px;
-    height:22px;
-    border: 1px solid red;
+    width:21px;
+    height:20px;
+
     border: none;
 
-    subcontrol-position: right top;
-    subcontrol-origin: padding;
+    padding-top: 6px;
+    padding-right: 4px;
 
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-radius: 6px;
-
-    /*border-radius: 4px;*/
-    /*padding-right: 0px;*/
-    /*background-image: url("./arrow_down.png");*/
+    image: url("./images/import.png");
 }
 
 QComboBox::down-arrow {
-    border: 1px solid green;
     border: none;
-    width: 28px;
-    height: 13px;
-    right: 0px;
-    top: 3px;
-    image: url("./arrow_down.png");
+
+    width: 21px;
+    height: 20px;
+
+    right: 50px;
+    top: 0px;
+
+    /*background-image: url("./images/import.png");*/
 }
 
-/*QComboBox QAbstractItemView {*/
-    /*font-family: "Microsoft YaHei";*/
-    /*font-size: 16px;*/
-    /*color: #BDC8E2;*/
-    /*font-style: italic;*/
-    /*font-weight: bold;*/
+QComboBox:QAbstractItemView {
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: red;
+    font-style: italic;
+    font-weight: bold;
 
-    /*background-color: red;*/
+    min-height: 30px;
 
-    /*outline: none;*/
-/*}*/
+    background-color: red;
 
-/*QComboBox QAbstractItemView::item {*/
-    /*color: #BDC8E2;*/
-    /*padding-left: 25px;*/
-    /*background-color: #212735;*/
-    /*min-height: 25px;*/
-    /*border: 1px solid #212735;*/
-/*}*/
+    outline: none;
+}
 
-/*QComboBox QAbstractItemView::item:hover {*/
-    /*color: #0DA5EF;*/
-    /*background-color: #212735;*/
-/*}*/
+QComboBox:QAbstractItemView::item {
+    color: #BDC8E2;
+    padding-left: 25px;
+    background-color: red;
+    min-height: 30px;
+    border: 1px solid #212735;
+}
 
-/*QComboBox QAbstractItemView::item:selected {*/
-    /*color: #0DA5EF;*/
-    /*background-color: #212735;*/
-/*}*/
+QComboBox:QAbstractItemView::item:hover {
+    color: #0DA5EF;
+    background-color: #212735;
+}
+
+QComboBox:QAbstractItemView::item:selected {
+    color: #0DA5EF;
+    background-color: #212735;
+}
