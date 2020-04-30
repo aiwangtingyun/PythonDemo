@@ -1,6 +1,6 @@
 #!/bin/python3
 # -*- coding: utf-8 -*-
-
+import re
 import sys
 import os
 import traceback
@@ -63,10 +63,11 @@ if __name__ == '__main__':
     # 测试聊天窗口
     window = WidgetDemo()
     # window.show()
-    try:
-        a = 55 / 0
-    except Exception as e:
-        print(traceback.format_exc(), e)
+
+    string = '\n\n测试前面的换行符\n\nabc\nefef'
+    pattern = '^\n{2}'
+    ret = re.findall(pattern, string)
+    print(ret, string.replace('\n\n', '', 1))
 
     # 测试demjson
     # a = "{\"title\": \"\\u2605\\u6e29\\u99a8\\u63d0\\u793a\\u2605\", " \
