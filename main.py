@@ -1,22 +1,19 @@
 #!/bin/python3
 # -*- coding: utf-8 -*-
-import re
+
 import sys
 import os
-import traceback
-
-import demjson
 
 from PyQt5.QtQuickWidgets import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
-from center.config_center import get_style_sheet
+from center.config_center import get_style_sheet, ROOT_DIR
 
 
 class WidgetDemo(QWidget):
-    '''实现全透明窗口'''
+    """ 实现全透明窗口 """
 
     def __init__(self):
         super(WidgetDemo, self).__init__()
@@ -53,27 +50,30 @@ class WidgetDemo(QWidget):
         self.quck_view.show()
 
 
+def draw_cat():
+    cat = r"""
+                    _
+                   / )
+                  ( (
+      A.-.A  .--.  ) )
+     / , , \/    \/ /
+    =\  t  ;=    / /
+      `--,'  .  / /
+        || |  \\ \
+       ((,_| ((,_\\
+   """
+    print(cat)
+
+
+def load_font():
+    # 加载字体
+    font_path = os.path.join(ROOT_DIR, 'font/seguisym.ttf')
+    QFontDatabase.addApplicationFont(font_path)
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    # 加载字体
-    # font_path = os.path.join(ROOT_DIR, 'font/seguisym.ttf')
-    # QFontDatabase.addApplicationFont(font_path)
-
-    # 测试聊天窗口
-    window = WidgetDemo()
-    # window.show()
-
-    string = '\n\n测试前面的换行符\n\nabc\nefef'
-    pattern = '^\n{2}'
-    ret = re.findall(pattern, string)
-    print(ret, string.replace('\n\n', '', 1))
-
-    # 测试demjson
-    # a = "{\"title\": \"\\u2605\\u6e29\\u99a8\\u63d0\\u793a\\u2605\", " \
-    #     "\"content\": \"\\u6b22\\u8fce\\u6765\\u6253\\u6b4c\\u5385\\u623f\\n" \
-    #     "\\ud83d\\ude04\\ud83d\\ude04\\ud83d\\ude04\\ud83d\\ude04\\ud83d\\ude03\", \"type\": 0}"
-    # b = demjson.decode(a)
-    # print(b)
+    draw_cat()
 
     sys.exit(app.exec_())

@@ -11,6 +11,8 @@ IMAGE_DIR = os.path.join(ROOT_DIR, 'images')
 QSS_DIR = os.path.join(ROOT_DIR, 'qss')
 # qml根目录
 QML_DIR = os.path.join(ROOT_DIR, 'qmls')
+# lib根目录
+LIB_DIR = os.path.join(ROOT_DIR, 'lib')
 
 
 def get_style_sheet(name='', way='python'):
