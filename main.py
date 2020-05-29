@@ -50,21 +50,6 @@ class WidgetDemo(QWidget):
         self.quck_view.show()
 
 
-def draw_cat():
-    cat = r"""
-                    _
-                   / )
-                  ( (
-      A.-.A  .--.  ) )
-     / , , \/    \/ /
-    =\  t  ;=    / /
-      `--,'  .  / /
-        || |  \\ \
-       ((,_| ((,_\\
-   """
-    print(cat)
-
-
 def load_font():
     # 加载字体
     font_path = os.path.join(ROOT_DIR, 'font/seguisym.ttf')
@@ -73,7 +58,5 @@ def load_font():
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-
-    draw_cat()
 
     sys.exit(app.exec_())
