@@ -42,12 +42,20 @@ class WidgetDemo(QWidget):
 
         # self.load_qml()
 
+    def leaveEvent(self, event):
+        print(self.__class__.__name__)
+
     def load_qml(self):
         self.quck_view = QQuickWidget(self)
         self.quck_view.setSource(QUrl('./qmls/chat_room.qml'))
         self.quck_view.setResizeMode(QQuickWidget.SizeRootObjectToView)
         self.quck_view.setGeometry(0, 0, self.width(), self.height())
         self.quck_view.show()
+
+
+class TestWidget(WidgetDemo):
+    def __init__(self):
+        super(TestWidget, self).__init__()
 
 
 def load_font():
@@ -58,5 +66,8 @@ def load_font():
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+
+    widget = TestWidget()
+    widget.show()
 
     sys.exit(app.exec_())

@@ -40,12 +40,13 @@ class CircleImage(QWidget):
         rect = QRect(2, 2, self.width() - 4, self.height() - 4)
         painter.drawRoundedRect(rect, self.width() / 2, self.height() / 2)
 
+
 if __name__ == '__main__':
     # 控件测试程序
     app = QApplication(sys.argv)
 
     widget = CircleImage()
-    image = QPixmap('../image/girl_1.jpg')
+    image = QPixmap('../images/girl.jpg')
     widget.set_image(image.scaled(widget.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
     widget.show()
 
