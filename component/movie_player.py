@@ -6,7 +6,7 @@
 import os
 
 import sys
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QMovie, QPainter
 from PyQt5.QtWidgets import QWidget, QLabel, QOpenGLWidget, QApplication
 
@@ -67,14 +67,16 @@ if __name__ == '__main__':
 
     window = QWidget()
     window.setWindowTitle('Demo')
-    window.resize(640, 480)
+    window.resize(750, 400)
 
     window.player = MoviePlayer(window)
     window.player.setGeometry(window.geometry())
-    movie_path = '../webp/爱心卷轴654.svga'
+    movie_path = '../images/webp/pk_start_anim_launch.webp'
     window.player.set_movie_path(movie_path)
     window.player.start_movie()
-
     window.show()
+
+    widget = QWidget()
+    widget.show()
 
     sys.exit(app.exec_())

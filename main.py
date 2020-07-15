@@ -67,7 +67,13 @@ def load_font():
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    widget = TestWidget()
-    widget.show()
+    # widget = TestWidget()
+    # widget.show()
+    time = 5
+    hour = time // (60 * 60)
+    minute = time % (60 * 60) // 60
+    second = time % 60
+    temp = "{}{}:{:0>2d}".format(hour, minute, second)
+    print(temp)
 
     sys.exit(app.exec_())

@@ -1,0 +1,229 @@
+/************************ widget类 ************************/
+QWidget#widget_titleBar{
+    background-color: #FF242429;
+}
+
+QWidget#main_window{
+    background-color: #accccccc;
+    margin: 2px;
+}
+
+QWidget#widget_menu{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #accccccc;
+    background-color: #ffffffff;
+}
+
+QWidget#widget_body{
+    background-color: #ffffff;
+}
+
+QWidget#dialog_body {
+    background-color: #ffffff;
+    border: 1px solid #cccccccc;
+}
+
+/********************** push_button类 *********************/
+QPushButton#pushButton_min{
+    border-image: url("./images/dialog/min_normal.png");
+    min-width: 18px; min-height: 18px; max-width: 18px; max-height: 18px;
+}
+
+QPushButton#pushButton_min:hover{
+    border-image: url("./images/dialog/min_hover.png");
+}
+
+QPushButton#pushButton_max{
+    border-image: url("./images/dialog/showmax_normal.png");
+    min-width: 18px; min-height: 18px; max-width: 18px; max-height: 18px;
+}
+
+QPushButton#pushButton_max:hover{
+    border-image: url("./images/dialog/showmax_hover.png");
+}
+
+QPushButton#pushButton_close{
+    border-image: url("./images/dialog/close_normal.png");
+    min-width: 18px; min-height: 18px; max-width: 18px; max-height: 18px;
+}
+
+QPushButton#pushButton_close:hover{
+    border-image: url("./images/dialog/close_hover.png");
+}
+
+QPushButton#pushButton_bookmark{
+    border-image: url("./images/dialog/bookmark.png");
+    border-radius: 16px;
+    min-width: 33px; min-height: 33px; max-width: 33px; max-height: 33px;
+}
+
+QPushButton#pushButton_bookmark:hover{
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_bookmark:pressed {
+    background-color: #9caaaaaa;
+}
+
+QPushButton#pushButton_slidebar{
+    border-image: url("./images/dialog/slidebar.png");
+    border-radius: 16px;
+    min-width: 33px; min-height: 33px; max-width: 33px; max-height: 33px;
+}
+
+QPushButton#pushButton_slidebar:hover{
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_slidebar:pressed{
+    background-color: #9caaaaaa;
+}
+
+QPushButton#pushButton_menu{
+    border-image: url("./images/dialog/menu_normal.png");
+    border-radius: 16px;
+    min-width: 33px; min-height: 33px; max-width: 33px; max-height: 33px;
+}
+
+QPushButton#pushButton_menu:hover{
+    border-image: url("./images/dialog/menu_hover.png");
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_menu:pressed{
+    background-color: #9caaaaaa;
+}
+
+QPushButton#pushButton_back{
+    border-image: url("./images/dialog/backward.png");
+    border-radius: 16px;
+    min-width: 33px; min-height: 33px; max-width: 33px; max-height: 33px;
+}
+
+QPushButton#pushButton_back:hover{
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_back:pressed{
+    border-image: url("./images/dialog/backward_hover.png");
+    background-color: #9caaaaaa;
+}
+
+QPushButton#pushButton_forward{
+    border-image: url("./images/dialog/forward.png");
+    border-radius: 16px;
+    min-width: 33px; min-height: 33px; max-width: 33px; max-height: 33px;
+}
+
+QPushButton#pushButton_forward:hover{
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_forward:pressed{
+    border-image: url("./images/dialog/forward_hover.png");
+    background-color: #9caaaaaa;
+}
+
+QPushButton#pushButton_refresh{
+    border-image: url("./images/dialog/refresh.png");
+    border-radius: 16px;
+    min-width: 33px; min-height: 33px; max-width: 33px; max-height: 33px;
+}
+
+QPushButton#pushButton_refresh:hover{
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_refresh:pressed{
+    background-color: #9caaaaaa;
+}
+
+QPushButton#pushButton_home {
+    border-image: url("./images/dialog/home.png");
+    border-radius: 16px;
+    min-width: 33px; min-height: 33px; max-width: 33px; max-height: 33px;
+}
+
+QPushButton#pushButton_home:hover {
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_home:pressed {
+    background-color: #9caaaaaa;
+}
+
+QPushButton#pushButton_collect{
+    border-image: url("./images/dialog/collect.png");
+    border-radius: 15px;
+    min-width: 30px; min-height: 30px; max-width: 30px; max-height: 30px;
+}
+
+QPushButton#pushButton_collect:hover {
+    background-color: #9ccccccc;
+}
+
+QPushButton#pushButton_collect:pressed {
+    border-image: url("./images/dialog/collect_ok.png");
+}
+
+QPushButton#pushButton_ok {
+    border: none;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #FFFFFFFF;
+    background-color: #ff7200;
+}
+
+QPushButton#pushButton_ok:hover {
+    background-color: #ffff9138;
+}
+
+/********************** label类 *********************/
+QLabel#label_appName{
+    font-family: "Caladea";
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+QLabel#label_search {
+    image: url("./images/dialog/search.png");
+    min-width: 30px; min-height: 30px; max-width: 30px; max-height: 30px;
+}
+
+QLabel#label_logo{
+    image: url("./images/dialog/window_logo.png");
+    min-width: 40px; min-height: 40px; max-width: 40px; max-height: 40px;
+}
+
+QLabel#label_title {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #ffcccccc;
+}
+
+QLabel#label_message {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #ff333333;
+}
+
+QLabel#label_dialog_image {
+    image: url("./images/dialog/prompt_warming.png")
+}
+
+QLabel#label_sep1 {
+    background-color: #cccccccc;
+}
+
+/********************** lineEdit类 *********************/
+QLineEdit#lineEdit_url{
+    border: none;
+    border-radius: 15px;
+    background-color: #5ccccccc;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #ff9e9e9e;
+    padding-left: 33px;
+}
