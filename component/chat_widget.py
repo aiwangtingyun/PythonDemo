@@ -39,6 +39,7 @@ class ChatWidget(QWidget):
         self.setStyleSheet('*{background-color:#ff243A55;font-family: "Microsoft YaHei";'
                            ' color:#ffffff; font-size:14px;}')
 
+        # 消息列表视图
         self.list_view = ChatListView(self, 528, 472)
         self.list_view.move(0, 30)
         self.list_view.has_new_msg.connect(self.has_new_msg)
@@ -46,22 +47,26 @@ class ChatWidget(QWidget):
 
         self.new_msg_count = 0
 
+        # 提示条
         self.tip = QLabel(self)
         self.tip.setGeometry(0, 0, self.width(), 30)
         self.tip.setAlignment(Qt.AlignCenter)
         self.tip.setStyleSheet('QLabel{font-size:16px; color:#FF7C45;}')
         self.tip.setText('聊天室面板')
 
+        # 文本输入
         self.text_input = QTextEdit(self)
         self.text_input.setGeometry(0, 502, 480, 100)
         self.text_input.setPlaceholderText('Enter 发送，Ctrl+Enter 换行')
         self.text_input.installEventFilter(self)
 
+        # 发送消息
         self.send_btn = QPushButton(self)
         self.send_btn.setText('发送')
         self.send_btn.setGeometry(480, 502, 55, 100)
         self.send_btn.clicked.connect(self.on_send_msg)
 
+        # 新消息提示按钮
         self.new_msg_btn = NewMsgTipButton(self)
         self.new_msg_btn.setGeometry(self.list_view.x()+5, self.list_view.y()+self.list_view.height()-30, 95, 27)
         self.new_msg_btn.hide()
@@ -120,8 +125,8 @@ class ChatWidget(QWidget):
         if text:
             msg = MsgData()
             msg.msg = text
-            # self.list_view.add_msg(msg)
-            self.list_view.model.add_like_emiji(msg)
+            self.list_view.add_msg(msg)
+            # self.list_view.model.add_like_emiji(msg)
             self.text_input.clear()
 
 
