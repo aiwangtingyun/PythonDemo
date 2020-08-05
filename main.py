@@ -10,6 +10,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
 from center.config_center import get_style_sheet, ROOT_DIR
+from component.emoji_widget import EmojiWidget
 
 
 class WidgetDemo(QWidget):
@@ -67,13 +68,7 @@ def load_font():
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    # widget = TestWidget()
-    # widget.show()
-    time = 5
-    hour = time // (60 * 60)
-    minute = time % (60 * 60) // 60
-    second = time % 60
-    temp = "{}{}:{:0>2d}".format(hour, minute, second)
-    print(temp)
+    widget = EmojiWidget()
+    widget.show()
 
     sys.exit(app.exec_())
